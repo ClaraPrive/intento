@@ -1,0 +1,10 @@
+# _config.yml
+
+# Desactiva el tema predeterminado de Jekyll
+theme: null
+
+# Configuración adicional (puedes agregar otras opciones según sea necesario)
+title: "Mi Proyecto"
+description: "Descripción de mi proyecto"
+url: "https://<tu_usuario>.github.io/<nombre_del_repositorio>"
+baseurl: ""
