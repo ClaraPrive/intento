@@ -1,5 +1,5 @@
-@import url('https://unpkg.com/normalize.css') layer(normalize);
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Guardian+Text+Sans&display=swap'); 
+@import url("https://unpkg.com/normalize.css") layer(normalize);
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Guardian+Text+Sans&display=swap");
 @layer normalize, base, demo;
 
 @layer demo {
@@ -31,13 +31,12 @@
     width: 74ch;
     max-width: calc(100% - 4rem);
     text-wrap: balance;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
     margin-bottom: 4rem;
     line-height: 1.5;
     opacity: 0.8;
     font-weight: 400;
-
-    }
+  }
 
   li :is(svg, h3) {
     opacity: 0.6;
@@ -51,36 +50,38 @@
   }
 
   li img {
-   /* filter: grayscale(0.2); */
+    /* filter: grayscale(0.2); */
     scale: 1.1;
     transition-property: filter, scale;
     transition-duration: calc(var(--speed) * 1.2);
     transition-timing-function: var(--easing);
   }
 
-  [data-active='true'] :is(a, p, h3, svg) {
+  [data-active="true"] :is(a, p, h3, svg) {
     opacity: var(--opacity, 1);
   }
-  [data-active='true'] :is(a, p) {
+  [data-active="true"] :is(a, p) {
     transition-delay: calc(var(--speed) * 0.25);
   }
 
-  [data-active='true'] img {
-   /* filter: grayscale(0); */
+  [data-active="true"] img {
+    /* filter: grayscale(0); */
     scale: 1;
     transition-delay: calc(var(--speed) * 0.25);
   }
-/* Estilo cuando el article se activa (cuando se pasa el mouse) */
-[data-active="true"]:hover .hole1 {
-  opacity: 0; /* Hace invisible hole 1 cuando el artículo está en hover */
-  transition-delay: calc(var(--speed) * 0.1); /* Espera para que la transición ocurra después de un pequeño retraso */
-}
+  /* Estilo cuando el article se activa (cuando se pasa el mouse) */
+  [data-active="true"]:hover .hole1 {
+    opacity: 0; /* Hace invisible hole 1 cuando el artículo está en hover */
+    transition-delay: calc(
+      var(--speed) * 0.1
+    ); /* Espera para que la transición ocurra después de un pequeño retraso */
+  }
   article {
-/*     outline: 2px dashed canvasText; */
+    /*     outline: 2px dashed canvasText; */
     width: calc(var(--article-width) * 1px);
     height: 100%;
     position: absolute;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
     top: 0;
     left: 0;
     display: flex;
@@ -91,77 +92,72 @@
     padding-bottom: 1rem;
     overflow: hidden;
     /* Estilo para el agujero en la parte superior */
- article::before {
-  content: '';
-  position: absolute;
-  top: 90px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;  /* Tamaño del agujero */
-  height: 120px; /* Tamaño del agujero */
-  border-radius: 50%;
-  background-color: #333;  /* Color del "agujero" */
-  z-index: 10;
-}
+    article::before {
+      content: "";
+      position: absolute;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px; /* Tamaño del agujero */
+      height: 120px; /* Tamaño del agujero */
+      border-radius: 50%;
+      background-color: #333; /* Color del "agujero" */
+      z-index: 10;
+    }
 
-/* Estilo de los círculos */
-.hole {
-  position: absolute;
-  border-radius: 50%;
-  background-color: #ffff;
-  z-index: 10;  /* Los círculos están por encima del contenido */
-  opacity: 1;  /* Opcional: ajusta la opacidad para que no sean totalmente opacos */
-  
-}
+    /* Estilo de los círculos */
+    .hole {
+      position: absolute;
+      border-radius: 50%;
+      background-color: #ffff;
+      z-index: 10; /* Los círculos están por encima del contenido */
+      opacity: 1; /* Opcional: ajusta la opacidad para que no sean totalmente opacos */
+    }
 
-/* Primer agujero */
-.hole1 {
-  width: 30px;  /* Tamaño del primer agujero */
-  height: 30px;
-  top: 3%;  /* Posición manual (ajústalo como desees) */
-  left: 5%;
-  
-  
-}
+    /* Primer agujero */
+    .hole1 {
+      width: 30px; /* Tamaño del primer agujero */
+      height: 30px;
+      top: 3%; /* Posición manual (ajústalo como desees) */
+      left: 5%;
+    }
 
-/* Segundo agujero */
-.hole2 {
-  width: 130px;  /* Tamaño del segundo agujero */
-  height: 130px;
-  top: 9%;  /* Posición manual */
-  left: 22%;
-}
-    
- h3 {
-  position: absolute;
-  top: 60px;
-  left: 35px;
-  transform-origin: 0 50%;
-  rotate: 90deg;
-  font-size: 1rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-family: 'IBM Plex Sans', sans-serif;
-  opacity: 1;
-  font-weight: bold;
-   
-}
- 
+    /* Segundo agujero */
+    .hole2 {
+      width: 130px; /* Tamaño del segundo agujero */
+      height: 130px;
+      top: 9%; /* Posición manual */
+      left: 22%;
+    }
+
+    h3 {
+      position: absolute;
+      top: 60px;
+      left: 35px;
+      transform-origin: 0 50%;
+      rotate: 90deg;
+      font-size: 1rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      font-family: "IBM Plex Sans", sans-serif;
+      opacity: 1;
+      font-weight: bold;
+    }
+
     svg {
       width: 18px;
       fill: none;
     }
 
-  p {
+    p {
       font-size: 13px;
       text-wrap: balance;
       line-height: 1.25;
       width: 28ch;
-    /*  margin-bottom: 50px; */
+      /*  margin-bottom: 50px; */
       --opacity: 1;
-     align-text:center;
-    margin-left: 20px;
-    
+      align-text: center;
+      margin-left: 20px;
     }
 
     a {
@@ -170,7 +166,6 @@
       height: 18px;
       line-height: 1;
       color: inherit;
-      
 
       &:is(:focus-visible, :hover) {
         outline: none;
@@ -195,9 +190,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-       mask: radial-gradient(180% 120% at 100% 0, #fff, #0000);
-      z-index:  1;
-     
+      mask: radial-gradient(180% 120% at 100% 0, #fff, #0000);
+      z-index: 1;
     }
   }
   /* gotta use some Math on the container really */
@@ -225,25 +219,28 @@
     );
     --speed: 0.6s;
   }
-  
-ul {
-  display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexibilidad en el número de columnas */
-  gap: var(--gap);
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  justify-content: center;
-  height: clamp(560px, 60dvh, 474px);
-  width: calc(
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(300px, 1fr)
+    ); /* Flexibilidad en el número de columnas */
+    gap: var(--gap);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: center;
+    height: clamp(560px, 60dvh, 474px);
+    width: calc(
       ((var(--items) - 1) * var(--base)) + ((var(--items) - 1) * var(--gap)) +
         var(--ideal)
     );
     width: 900px;
     max-width: calc(100% - 4rem);
     transition: grid-template-columns var(--speed) var(--easing);
-}
+  }
   li {
     /* outline: 4px dashed canvasText; */
     position: relative;
@@ -253,8 +250,6 @@ ul {
     border: 1px solid color-mix(in hsl, canvas, canvasText 50%);
   }
 }
-
-
 
 @layer base {
   :root {
@@ -270,11 +265,11 @@ ul {
     color-scheme: light dark;
   }
 
-  [data-theme='light'] {
+  [data-theme="light"] {
     color-scheme: light only;
   }
 
-  [data-theme='dark'] {
+  [data-theme="dark"] {
     color-scheme: dark only;
   }
 
@@ -309,13 +304,13 @@ ul {
     display: grid;
     place-items: center;
     min-height: 100vh;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
   }
 
   body::before {
     --size: 45px;
     --line: color-mix(in hsl, canvasText, transparent 70%);
-    content: '';
+    content: "";
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -324,7 +319,6 @@ ul {
     pointer-events: none;
     z-index: -1;
   }
-
 
   /* Utilities */
   .sr-only {
@@ -340,7 +334,7 @@ ul {
   }
 }
 
- /* Estilo responsive para pantallas pequeñas */
+/* Estilo responsive para pantallas pequeñas */
 @media (max-width: 768px) {
   ul {
     display: grid !important;
@@ -356,9 +350,8 @@ ul {
     margin-bottom: 20px;
   }
 
-
   .hole1 {
-     opacity: 0;
+    opacity: 0;
   }
 
   .hole2 {
@@ -368,20 +361,19 @@ ul {
     left: 40%;
   }
   p {
-    text-align:center;
+    text-align: center;
     font-size: 14px;
     text-wrap: balance;
     line-height: 1.5;
     /* width: 33.5ch; */
-   /* margin-bottom: 90px; */
+    /* margin-bottom: 90px; */
     --opacity: 0.9;
     margin: 0 auto; /* Centra el texto */
-     /*padding-bottom: 5px;*/ 
+    /*padding-bottom: 5px;*/
   }
-  
+
   h1 {
-   text-align:center; 
-   margin: 0 auto; /* Centra el texto */
+    text-align: center;
+    margin: 0 auto; /* Centra el texto */
   }
-  
 }
